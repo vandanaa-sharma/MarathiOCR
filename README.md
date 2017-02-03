@@ -32,7 +32,7 @@ Errors encountered
 
  1.   **NDK build errors**: (running command ndk-build in ocrProject\tess-two\)
 
-	> While trying to build eyes-two (tess-two) project -   
+  While trying to build eyes-two (tess-two) project -   
 - Space not acceptable in ndk path
 - Error : System cannot find the specified path (for ndk) -
   Fixed by downloading correct ndk from - https://developer.android.com/ndk/downloads/index.html 
