@@ -32,7 +32,7 @@ Errors encountered
 
  1.   **NDK build errors**: (running command ndk-build in ocrProject\tess-two\)
 
-  While trying to build eyes-two (tess-two) project -   
+  While trying to build **eyes-two** (tess-two) project -   
 - Space not acceptable in ndk path
 - Error : System cannot find the specified path (for ndk) -
   Fixed by downloading correct ndk from - https://developer.android.com/ndk/downloads/index.html 
@@ -42,7 +42,7 @@ Errors encountered
  2. While setting project path (running command - android update project --path ocrProject\tess-two)
 - Error1 - Android is not recognized as an internal or external command
   Fix - Add the path to android.bat file to your PATH variable and re-launch command prompt
-           Path to android.bat - E:\AndriodSDKS\tools
+  Path to android.bat - E:\AndriodSDKS\tools
 - Error2 - The project either has no target set or the target is invalid
   Fixed by adding --target argument
    **android update project --path F:\ocrProject\tess-two\tess-two --target android-23**
@@ -67,3 +67,7 @@ Errors encountered
    - And added following dependencies in main build.gradle - 
      classpath 'com.github.dcendents:android-maven-plugin:1.2'
      classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
+   - Error3 -  Could not find definitions for tess-two’s build.gradle file’s install{} and bintray{} blocks. Commented the blocks temporarily
+   
+ 6. Error - datapath does not exist on device at - mTess.init(datapath, languag) in OCRFunctions.java (mTess is TessBaseAPI’s object)
+   - Fix - Added mar.trained data file to the folder “storage/emulated/0/tesseract/tessdata/” (folders created manually)
