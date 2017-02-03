@@ -3,6 +3,9 @@
 Optical character recognition for **marathi** language.
 A simple implementation for **OCR** in Marathi using tess-two library.
 
+![Screenshots](https://drive.google.com/uc?export=download&id=0BzzRMu6z0xt0aHJjQ0dPa29DNlE)
+
+
 ----------
 
 Downloads
