@@ -3,7 +3,7 @@ Optical character recognition for marathi language
 
 A simple implementation for OCR in Marathi using tess-two library.
 
-Details
+Details -
 
 Downloads: 
 
@@ -24,7 +24,10 @@ Android Studio (2.2 (requires Java 1.8 or later) Windows 32 -bit) - https://deve
 
 JDK 1.8 - http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
+
+
 Add path to PATH environment variable for NDK,  SDK, JDK and Apache ANT
+
 
 Followed set up instruction for tess-two library from - https://www.codeproject.com/tips/840623/android-character-recognition
 
