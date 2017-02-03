@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_options"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
+    tools:context="ocrmarathi.marathiocr.Options">
+
+    <LinearLayout
+        android:id="@+id/icons"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_width="fill_parent"
+        android:layout_height="160dip"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/cameraIcon"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_margin="30dp"-->
+            <!--android:background="@null"-->
+            <!--android:clickable="true"-->
+            <!--android:elevation="10dp"-->
+            <!--android:src="@drawable/camera"/>-->
+
+        <ImageButton
+            android:id="@+id/galleryIcon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:clickable="true"
+            android:background="@null"
+            android:elevation="20dp"
+            android:layout_gravity="center_horizontal"
+            android:tag="Open Gallery"
+            android:src="@drawable/gallery"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        >
+    </ImageView>
+
+    <EditText
+        android:id="@+id/txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:cursorVisible="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        />
+
+</RelativeLayout>

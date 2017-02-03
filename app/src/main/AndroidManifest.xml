@@ -1,20 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ocrmarathi.marathiocr" >
+    package="ocrmarathi.marathiocr">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <provider
+        android:name="android.support.v4.content.FileProvider"
+        android:authorities="ocrmarathi.marathiocr.fileprovider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/file_paths" />
+    </provider>
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.SEND" /> -->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- <data android:mimeType="text/plain" /> -->
+            <!-- <data android:mimeType="image/*" /> -->
+            <!-- </intent-filter> -->
         </activity>
+        <activity android:name=".Options" />
     </application>
 
 </manifest>
