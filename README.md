@@ -9,12 +9,19 @@ Downloads:
 
 Github links -
 Tess Two Project - https://github.com/rmtheis/tess-two/
+
 Trained data files - https://github.com/tesseract-ocr/tessdata
+
 Marathi trained data - https://github.com/tesseract-ocr/tessdata/blob/master/mar.traineddata
+
 English trained data - https://github.com/tesseract-ocr/tessdata/blob/master/eng.traineddata
+
 Apache Ant (1.9.7) - http://mirror.fibergrid.in/apache//ant/binaries/apache-ant-1.9.7-bin.zip 
+
 Android NDK (r13-b Windows 32-bit) - http://dl.google.com/android/ndk/android-ndk-r10c-windows-x86_64.exe
+
 Android Studio (2.2 (requires Java 1.8 or later) Windows 32 -bit) - https://developer.android.com/studio/index.html?gclid=Cj0KEQjwhvbABRDOp4rahNjh-tMBEiQA0QgTGmlD8svYooPgNCNkPyGEN_j5CcCtd_3U_klg5WvDfVcaAv-Y8P8HAQ 
+
 JDK 1.8 - http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
 Add path to PATH environment variable for NDK,  SDK, JDK and Apache ANT
@@ -57,13 +64,13 @@ Error2 - The project either has no target set or the target is invalid
 - Error1 - Plugin with id 'com.github.dcendents.android-maven'
  Removed lines
    apply plugin: 'com.github.dcendents.android-maven'
- apply plugin: 'com.jfrog.bintray' from tess-twoís build.gradle file
+ apply plugin: 'com.jfrog.bintray' from tess-two‚Äôs build.gradle file
 And added following dependencies in main build.gradle - 
 classpath 'com.github.dcendents:android-maven-plugin:1.2'
 classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
 
-- Error3 -  Could not find definitions for tess-twoís build.gradle fileís install{} and bintray{} blocks. Commented the blocks temporarily
+- Error3 -  Could not find definitions for tess-two‚Äôs build.gradle file‚Äôs install{} and bintray{} blocks. Commented the blocks temporarily
 
 
-6. Error - datapath does not exist on device at - mTess.init(datapath, languag) in OCRFunctions.java (mTess is TessBaseAPIís object)
-- Fix - Added mar.trained data file to the folder ìstorage/emulated/0/tesseract/tessdata/î (folders created manually)
+6. Error - datapath does not exist on device at - mTess.init(datapath, languag) in OCRFunctions.java (mTess is TessBaseAPI‚Äôs object)
+- Fix - Added mar.trained data file to the folder ‚Äústorage/emulated/0/tesseract/tessdata/‚Äù (folders created manually)
