@@ -41,11 +41,11 @@ Errors encountered
  
  2. While setting project path (running command - android update project --path ocrProject\tess-two)
 - Error1 - Android is not recognized as an internal or external command
-  Fix - Add the path to android.bat file to your PATH variable and re-launch command prompt
+  **Fix** - Add the path to android.bat file to your PATH variable and re-launch command prompt
   Path to android.bat - E:\AndriodSDKS\tools
 - Error2 - The project either has no target set or the target is invalid
-  Fixed by adding --target argument
-   **android update project --path F:\ocrProject\tess-two\tess-two --target android-23**
+  **Fix** - add --target argument
+   *android update project --path F:\ocrProject\tess-two\tess-two --target android-23*
    You can check the list of avaiable targets in our SDKs by running command - android list targets
    
  3.  While running command - **ant release** :
@@ -61,14 +61,14 @@ Errors encountered
    - Caution: Copy all the contents of your internal tess-two folder into libraries/tess-two in android project tree (create new directory libraries)
    - Error1 - Plugin with id 'com.jfrog.bintray' not found 
    - Error2 - Plugin with id 'com.github.dcendents.android-maven'
-      -Removed lines
-        apply plugin: 'com.github.dcendents.android-maven'
-        apply plugin: 'com.jfrog.bintray' from tess-two’s build.gradle file
-   - And added following dependencies in main build.gradle - 
-       -classpath 'com.github.dcendents:android-maven-plugin:1.2'
-       -classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
+     **Fix** - Removed lines - 
+        *apply plugin: 'com.github.dcendents.android-maven', 
+        apply plugin: 'com.jfrog.bintray' from tess-two’s build.gradle file*
+    - And added following dependencies in main build.gradle - 
+       *classpath 'com.github.dcendents:android-maven-plugin:1.2', 
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'*
    - Error3 -  Could not find definitions for tess-two’s build.gradle file’s install{} and bintray{} blocks. 
-      -Commented the blocks temporarily
+     **Fix** - Commented the blocks temporarily
    
  6. Error - datapath does not exist on device at - mTess.init(datapath, languag) in OCRFunctions.java (mTess is TessBaseAPI’s object)
    - Fix - Added mar.trained data file to the folder “storage/emulated/0/tesseract/tessdata/” (folders created manually)
