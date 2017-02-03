@@ -40,10 +40,10 @@ Errors encountered
  Fixed by creating new environment variable NDK_PROJECT_PATH and setting it's value to - F:\ocrProject\tess-two\tess-two
  
  2. While setting project path (running command - android update project --path ocrProject\tess-two)
-- Error1 - Android is not recognized as an internal or external command
+- Error1 - Android is not recognized as an internal or external command. 
   **Fix** - Add the path to android.bat file to your PATH variable and re-launch command prompt
   Path to android.bat - E:\AndriodSDKS\tools
-- Error2 - The project either has no target set or the target is invalid
+- Error2 - The project either has no target set or the target is invalid. 
   **Fix** - add --target argument
    *android update project --path F:\ocrProject\tess-two\tess-two --target android-23*
    You can check the list of avaiable targets in our SDKs by running command - android list targets
@@ -70,5 +70,5 @@ Errors encountered
    - Error3 -  Could not find definitions for tess-two’s build.gradle file’s install{} and bintray{} blocks. 
      **Fix** - Commented the blocks temporarily
    
- 6. Error - datapath does not exist on device at - mTess.init(datapath, languag) in OCRFunctions.java (mTess is TessBaseAPI’s object)
-     -**Fix** - Added mar.trained data file to the folder “storage/emulated/0/tesseract/tessdata/” (folders created manually)
+ 6. Error - datapath does not exist on device at - mTess.init(datapath, languag) in OCRFunctions.java (mTess is TessBaseAPI’s object). 
+     **Fix** - Added mar.trained data file to the folder “storage/emulated/0/tesseract/tessdata/” (folders created manually)
