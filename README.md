@@ -61,13 +61,14 @@ Errors encountered
    - Caution: Copy all the contents of your internal tess-two folder into libraries/tess-two in android project tree (create new directory libraries)
    - Error1 - Plugin with id 'com.jfrog.bintray' not found 
    - Error2 - Plugin with id 'com.github.dcendents.android-maven'
-     Removed lines
-     apply plugin: 'com.github.dcendents.android-maven'
-     apply plugin: 'com.jfrog.bintray' from tess-two’s build.gradle file
+      -Removed lines
+        apply plugin: 'com.github.dcendents.android-maven'
+        apply plugin: 'com.jfrog.bintray' from tess-two’s build.gradle file
    - And added following dependencies in main build.gradle - 
-     classpath 'com.github.dcendents:android-maven-plugin:1.2'
-     classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
-   - Error3 -  Could not find definitions for tess-two’s build.gradle file’s install{} and bintray{} blocks. Commented the blocks temporarily
+       -classpath 'com.github.dcendents:android-maven-plugin:1.2'
+       -classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
+   - Error3 -  Could not find definitions for tess-two’s build.gradle file’s install{} and bintray{} blocks. 
+      -Commented the blocks temporarily
    
  6. Error - datapath does not exist on device at - mTess.init(datapath, languag) in OCRFunctions.java (mTess is TessBaseAPI’s object)
    - Fix - Added mar.trained data file to the folder “storage/emulated/0/tesseract/tessdata/” (folders created manually)
