@@ -38,3 +38,17 @@ Errors encountered
   Fixed by downloading correct ndk from - https://developer.android.com/ndk/downloads/index.html 
 - Error - Your build script points to an unknown file jni/Android.mk
  Fixed by creating new environment variable NDK_PROJECT_PATH and setting it's value to - F:\ocrProject\tess-two\tess-two
+ 
+  2.While setting project path (running command - android update project --path ocrProject\tess-two)
+- Error1 - android is not recognized as an internal or external command
+  Fix - Add the path to android.bat file to your PATH variable and re-launch command prompt
+           Path to android.bat - E:\AndriodSDKS\tools
+- Error2 - The project either has no target set or the target is invalid
+  Fixed by adding --target argument
+   android update project --path F:\ocrProject\tess-two\tess-two --target android-23
+   You can check the list of avaiable targets in our SDKs by running command - android list targets
+   
+ 3.While running command - **ant release** :
+    -Apache ant was not installed on machine, downloaded apache ant and added the following path to PATH environment variable - F:\apache-ant-1.9.7\bin
+ Created a variable JAVA_HOME in environment variables and set its value to - C:\Program Files\Java\jdk1.8.0_111
+ Re-launched command prompt in tess-two
