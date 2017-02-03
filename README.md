@@ -8,22 +8,14 @@ Details -
 Downloads: 
 
 Github links -
-Tess Two Project - https://github.com/rmtheis/tess-two/
-
+1. Tess Two Project - https://github.com/rmtheis/tess-two/
 Trained data files - https://github.com/tesseract-ocr/tessdata
-
-Marathi trained data - https://github.com/tesseract-ocr/tessdata/blob/master/mar.traineddata
-
-English trained data - https://github.com/tesseract-ocr/tessdata/blob/master/eng.traineddata
-
-Apache Ant (1.9.7) - http://mirror.fibergrid.in/apache//ant/binaries/apache-ant-1.9.7-bin.zip 
-
-Android NDK (r13-b Windows 32-bit) - http://dl.google.com/android/ndk/android-ndk-r10c-windows-x86_64.exe
-
-Android Studio (2.2 (requires Java 1.8 or later) Windows 32 -bit) - https://developer.android.com/studio/index.html?gclid=Cj0KEQjwhvbABRDOp4rahNjh-tMBEiQA0QgTGmlD8svYooPgNCNkPyGEN_j5CcCtd_3U_klg5WvDfVcaAv-Y8P8HAQ 
-
-JDK 1.8 - http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-
+2. Marathi trained data - https://github.com/tesseract-ocr/tessdata/blob/master/mar.traineddata
+3. English trained data - https://github.com/tesseract-ocr/tessdata/blob/master/eng.traineddata
+4. Apache Ant (1.9.7) - http://mirror.fibergrid.in/apache//ant/binaries/apache-ant-1.9.7-bin.zip 
+5. Android NDK (r13-b Windows 32-bit) - http://dl.google.com/android/ndk/android-ndk-r10c-windows-x86_64.exe
+6. Android Studio (2.2 (requires Java 1.8 or later) Windows 32 -bit) - https://developer.android.com/studio/index.html?gclid=Cj0KEQjwhvbABRDOp4rahNjh-tMBEiQA0QgTGmlD8svYooPgNCNkPyGEN_j5CcCtd_3U_klg5WvDfVcaAv-Y8P8HAQ 
+7. JDK 1.8 - http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
 
 Add path to PATH environment variable for NDK,  SDK, JDK and Apache ANT
@@ -60,17 +52,17 @@ Error2 - The project either has no target set or the target is invalid
    - In gradle.properties file change the value of org.gradle.jvmargs=-Xmx512m 
     (Windows 7 32 bit space allocation related error)
 
-5. On adding libraries/tess-two to android project -
+5. On adding libraries/tess-two to android project
 -Caution: Copy all the contents of your internal tess-two folder into libraries/tess-two in android project tree (create new directory libraries)
--Error2 - Plugin with id 'com.jfrog.bintray' not found 
--Error1 - Plugin with id 'com.github.dcendents.android-maven'
- Removed lines
+- Error2 - Plugin with id 'com.jfrog.bintray' not found 
+- Error1 - Plugin with id 'com.github.dcendents.android-maven'
+Removed lines
    apply plugin: 'com.github.dcendents.android-maven'
  apply plugin: 'com.jfrog.bintray' from tess-two’s build.gradle file
 And added following dependencies in main build.gradle - 
 classpath 'com.github.dcendents:android-maven-plugin:1.2'
 classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
--Error3 -  Could not find definitions for tess-two’s build.gradle file’s install{} and bintray{} blocks. Commented the blocks temporarily
+- Error3 -  Could not find definitions for tess-two’s build.gradle file’s install{} and bintray{} blocks. Commented the blocks temporarily
 
 6. Error - datapath does not exist on device at - mTess.init(datapath, languag) in OCRFunctions.java (mTess is TessBaseAPI’s object)
--Fix - Added mar.trained data file to the folder “storage/emulated/0/tesseract/tessdata/” (folders created manually)
+-Fix-Added mar.trained data file to the folder “storage/emulated/0/tesseract/tessdata/” (folders created manually)
