@@ -48,16 +48,16 @@ Errors encountered
    **android update project --path F:\ocrProject\tess-two\tess-two --target android-23**
    You can check the list of avaiable targets in our SDKs by running command - android list targets
    
-3.  While running command - **ant release** :
+ 3.  While running command - **ant release** :
  - Apache ant was not installed on machine, downloaded apache ant and added the following path to PATH environment variable - F:\apache-ant-1.9.7\bin
  - Created a variable **JAVA_HOME** in environment variables and set its value to - C:\Program Files\Java\jdk1.8.0_111
  - Re-launched command prompt in tess-two
  
-4.  While setting up Android Studio 
+ 4.  While setting up Android Studio 
 - Correct project settings- Go to File >> Project Structure >> Make sure the path to our sdk, jdk and ndk is the latest one you installed
 - In gradle.properties file change the value of org.gradle.jvmargs=-Xmx512m  (Windows 7 32 bit space allocation related error)
 
-5. On adding libraries/tess-two to android project -
+ 5. On adding libraries/tess-two to android project -
  - Caution: Copy all the contents of your internal tess-two folder into libraries/tess-two in android project tree (create new directory libraries)
 - Error1 - Plugin with id 'com.jfrog.bintray' not found 
 - Error2 - Plugin with id 'com.github.dcendents.android-maven'
