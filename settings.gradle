@@ -1,4 +1,0 @@
-include ':app'
-include ':app', ':tess-two'
-include ':libraries:tess-two'
-project(':tess-two').projectDir = new File('libraries/tess-two')
